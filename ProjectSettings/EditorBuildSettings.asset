@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quests.unity
     guid: be156d8c77040b04cb1c035086c64155
+  - enabled: 1
+    path: Assets/Scenes/Novel.unity
+    guid: e069fbeb6e08ec84985bb750c3227466
   m_configObjects: {}

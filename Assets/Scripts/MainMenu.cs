@@ -16,4 +16,9 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void StartNovell()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
