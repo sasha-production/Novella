@@ -14,9 +14,10 @@ namespace Game.View
         private ChoiseButton tmp;
 
         public void Show() => _self.enabled = true;
-        public void Add(MyDialogs.ChoiseElement choiseElement)
+        public void Add(MyDialogs.ChoiseElement choiseElement, Say say)
         {
             tmp = Instantiate(_prefabs, _parrent);
+            tmp.Say = say;
             tmp.Show(choiseElement);
         }
         public void Hide() => _self.enabled = false;

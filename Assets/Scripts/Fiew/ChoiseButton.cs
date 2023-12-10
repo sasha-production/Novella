@@ -14,7 +14,7 @@ public class ChoiseButton : MonoBehaviour
     [SerializeField] private Say _say;
 
     public MyDialogs Dialogs { get; private set; }
-
+    public Say Say { set => _say = value; }
     public void Show(MyDialogs.ChoiseElement choiseElement)
     {
         _text.SetText(choiseElement.Text);

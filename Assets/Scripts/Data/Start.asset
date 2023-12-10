@@ -26,6 +26,9 @@ MonoBehaviour:
     _text: "\u0417\u0430\u0447\u0435\u043C \u043F\u0440\u0438\u0448\u0435\u043B?"
     _choises:
     - _text: "\u0417\u0430 \u0441\u0432\u0438\u0442\u043A\u043E\u043C"
-      _dialogs: {fileID: 0}
+      _dialogs: {fileID: 11400000, guid: 0dd278a2f2f718341a1b46a538daed2a, type: 2}
     - _text: "\u041D\u0435 \u0437\u0430 \u0441\u0432\u0438\u0442\u043A\u043E\u043C"
-      _dialogs: {fileID: 0}
+      _dialogs: {fileID: 11400000, guid: 5b38de340e066ff49861c122ef2d1b81, type: 2}
+  - _name: "\u0417\u0430\u043A\u0430\u0437\u0447\u0438\u043A"
+    _text: ook lets go
+    _choises: []

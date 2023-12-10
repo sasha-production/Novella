@@ -17,15 +17,20 @@ namespace Game.View
         private int _index;
         private void Start()
         {
-            if (_dialogs != null) NextDialog();
+            if (_dialogs != null)
+                NextDialog();
         }
 
         // Update is called once per frame
         public void NextDialog()
         {
-            if (_index == _dialogs.Get.Length) return;
+            if (_index == _dialogs.Get.Length)
+                return;
             _name.SetText(_dialogs.Get[_index].Name);
             _text.SetText(_dialogs.Get[_index].Text);
+            Debug.Log(_dialogs.Get[_index].Text);
+            _index++;
+            ChoiseCreate();
             _index++;
         }
 
@@ -35,7 +40,7 @@ namespace Game.View
             {
                 foreach (MyDialogs.ChoiseElement element in _dialogs.Get[_index].choises)
                 {
-                    _choise.Add(element);
+                    _choise.Add(element, this);
                 }
             }
         }
