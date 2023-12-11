@@ -28,8 +28,7 @@ namespace Game.View
                 return;
             _name.SetText(_dialogs.Get[_index].Name);
             _text.SetText(_dialogs.Get[_index].Text);
-            Debug.Log(_dialogs.Get[_index].Text);
-            _index++;
+
             ChoiseCreate();
             _index++;
         }
@@ -38,6 +37,7 @@ namespace Game.View
         {
             if (_dialogs.Get[_index].choises.Length != 0)
             {
+                _choise.Show();
                 foreach (MyDialogs.ChoiseElement element in _dialogs.Get[_index].choises)
                 {
                     _choise.Add(element, this);
