@@ -1,9 +1,8 @@
-using Game.Data;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using MyDialogs = Game.Data.Dialogs;
+using UnityEngine.SceneManagement;
+using UnityEditor.Build.Content;
 
 namespace Game.View
 {
@@ -12,7 +11,7 @@ namespace Game.View
         [SerializeField] private MyDialogs _dialogs;
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private TextMeshProUGUI _text;
-        [SerializeField] private Choise _choise;  //Choise _choise
+        [SerializeField] public Choise _choise;  //Choise _choise  // pr
 
         private int _index;
         private void Start()
@@ -24,13 +23,20 @@ namespace Game.View
         // Update is called once per frame
         public void NextDialog()
         {
+            
             if (_index == _dialogs.Get.Length)
                 return;
             _name.SetText(_dialogs.Get[_index].Name);
             _text.SetText(_dialogs.Get[_index].Text);
-
+            //Debug.Log(_index);
             ChoiseCreate();
             _index++;
+
+            if (_dialogs.name.EndsWith("End") && _index == _dialogs.Get.Length)
+            {
+                SceneManager.LoadScene(2);
+            }
+            
         }
 
         private void ChoiseCreate()
@@ -38,18 +44,31 @@ namespace Game.View
             if (_dialogs.Get[_index].choises.Length != 0)
             {
                 _choise.Show();
+                foreach (Transform child in _choise._parrent)
+                {
+                    Destroy(child.gameObject);
+                }
+                //Debug.Log(_dialogs.Get[_index].choises.Length);
                 foreach (MyDialogs.ChoiseElement element in _dialogs.Get[_index].choises)
                 {
                     _choise.Add(element, this);
                 }
             }
         }
-        public void Choise(ChoiseButton choiceButton)
+        public void Choise(ChoiseButton choiceButton)  // создает кнопки на экране
         {
             _index = 0;
             _dialogs = choiceButton.Dialogs;
             choiceButton.Hide();
             _choise.Hide();
+        }
+
+        public void BackToMainQuestion()
+        {
+            if (_dialogs.name.EndsWith("End") && _index == _dialogs.Get.Length )
+            {
+                SceneManager.LoadScene(2);
+            }
         }
     }
 }

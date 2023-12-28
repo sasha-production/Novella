@@ -1,7 +1,4 @@
-using Game.Data;
 using Game.View;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +19,9 @@ public class ChoiseButton : MonoBehaviour
         _self.onClick.AddListener(() => _say.Choise(this));
     }
 
-    public void Hide() => Destroy(gameObject);
+    public void Hide()
+    {
+        Destroy(gameObject);
+    }
 
 }

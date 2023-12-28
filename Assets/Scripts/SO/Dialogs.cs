@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Game.Data
@@ -12,6 +13,8 @@ namespace Game.Data
             [SerializeField] private string _name;
             [SerializeField][TextArea(5, 10)] private string _text;
             [SerializeField] private ChoiseElement[] _choises;
+            
+
 
             public string Name => _name;
             public string Text => _text;
@@ -19,7 +22,7 @@ namespace Game.Data
         }
 
         [System.Serializable]
-        public class ChoiseElement
+        public class ChoiseElement  // хранит текст кнопки и следующий ресурс диалога
         {
             [SerializeField] private string _text;
             [SerializeField] private Dialogs _dialogs;
