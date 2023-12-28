@@ -31,11 +31,6 @@ namespace Game.View
             //Debug.Log(_index);
             ChoiseCreate();
             _index++;
-
-            if (_dialogs.name.EndsWith("End") && _index == _dialogs.Get.Length)
-            {
-                SceneManager.LoadScene(2);
-            }
             
         }
 

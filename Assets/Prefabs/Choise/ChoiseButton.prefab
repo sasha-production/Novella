@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1928539327133270559}
   - component: {fileID: 7920292932185486123}
   - component: {fileID: 6184767153687306986}
+  - component: {fileID: 1564141877587917933}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -97,11 +98,11 @@ MonoBehaviour:
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 14
+  m_fontSizeMax: 18
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -135,6 +136,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1564141877587917933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646145494622060978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 50
+  m_FlexibleHeight: 50
+  m_LayoutPriority: 1
 --- !u!1 &8310174185564935280
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +169,7 @@ GameObject:
   - component: {fileID: 6802436442164975527}
   - component: {fileID: 352434474951693479}
   - component: {fileID: 4667518809462930288}
+  - component: {fileID: 620459903471718981}
   m_Layer: 0
   m_Name: ChoiseButton
   m_TagString: Untagged
@@ -174,7 +196,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1, y: 95}
-  m_SizeDelta: {x: 579.267, y: 40.48169}
+  m_SizeDelta: {x: 579.267, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5647106417879255921
 CanvasRenderer:
@@ -273,3 +295,17 @@ MonoBehaviour:
   _text: {fileID: 6184767153687306986}
   _self: {fileID: 352434474951693479}
   _say: {fileID: 0}
+--- !u!114 &620459903471718981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310174185564935280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
