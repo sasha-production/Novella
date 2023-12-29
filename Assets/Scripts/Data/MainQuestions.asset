@@ -27,10 +27,10 @@ MonoBehaviour:
       _dialogs: {fileID: 11400000, guid: 6d7754a28bf024d42a4005e93e88b09a, type: 2}
     - _text: "\u041C\u0435\u0441\u0442\u043E \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F
         \u0437\u0430\u0434\u0430\u0447\u0438"
-      _dialogs: {fileID: 0}
+      _dialogs: {fileID: 11400000, guid: cf4ac4baab37919488cb286ef1ac45b5, type: 2}
     - _text: "\u0427\u0435\u043C \u0432\u0430\u0441 \u043D\u0435 \u0443\u0441\u0442\u0440\u043E\u0438\u043B\u0438
         \u0434\u0440\u0443\u0433\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F
         \u043D\u0430 \u0440\u044B\u043D\u043A\u0435"
-      _dialogs: {fileID: 0}
+      _dialogs: {fileID: 11400000, guid: 24fb06dc1e5648f47bbb7a48b8d6a177, type: 2}
     - _text: "\u041F\u0443\u0442\u044C \u0434\u043E \u043C\u0435\u0441\u0442\u0430"
-      _dialogs: {fileID: 0}
+      _dialogs: {fileID: 11400000, guid: 7c16dfb9a421e8846a241b2db0997271, type: 2}
