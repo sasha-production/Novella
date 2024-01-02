@@ -17,11 +17,11 @@ public class ChoiseButton : MonoBehaviour
         _text.SetText(choiseElement.Text);
         Dialogs = choiseElement.Dialogs;
         _self.onClick.AddListener(() => _say.Choise(this));
+        
     }
 
     public void Hide()
     {
         Destroy(gameObject);
     }
-
 }
