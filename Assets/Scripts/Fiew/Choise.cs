@@ -10,7 +10,6 @@ namespace Game.View
         [SerializeField] private ChoiseButton _prefabs;
 
         private ChoiseButton tmp;
-
         public void Show()
         {
             _self.enabled = true;

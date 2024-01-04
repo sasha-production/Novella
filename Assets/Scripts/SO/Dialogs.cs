@@ -12,13 +12,14 @@ namespace Game.Data
         {
             [SerializeField] private string _name;
             [SerializeField][TextArea(5, 10)] private string _text;
-            [SerializeField] private ChoiseElement[] _choises;
-            
+            [SerializeField] private int _number;
+            [SerializeField] private ChoiseElement[] _choises;            
 
 
             public string Name => _name;
             public string Text => _text;
             public ChoiseElement[] choises => _choises;
+            public int Number => _number;
         }
 
         [System.Serializable]

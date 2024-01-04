@@ -3,6 +3,7 @@ using UnityEngine;
 using MyDialogs = Game.Data.Dialogs;
 using UnityEngine.SceneManagement;
 using UnityEditor.Build.Content;
+using UnityEngine.UI;
 
 namespace Game.View
 {
@@ -12,15 +13,16 @@ namespace Game.View
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private TextMeshProUGUI _text;
         [SerializeField] public Choise _choise;  //Choise _choise  // pr
-
+        [SerializeField] private TextMeshProUGUI _questionCounter;
+        [SerializeField] private Button _returnButton;
         private int _index;
+        private int counter = 3;
         private void Start()
         {
             if (_dialogs != null)
                 NextDialog();
         }
-
-        // Update is called once per frame
+        
         public void NextDialog()
         {
             
@@ -28,10 +30,10 @@ namespace Game.View
                 return;
             _name.SetText(_dialogs.Get[_index].Name);
             _text.SetText(_dialogs.Get[_index].Text);
-            //Debug.Log(_index);
-            ChoiseCreate();
-            _index++;
-            
+            SetCounter();
+            SetReturnButtonColor();
+            ChoiseCreate();            
+            _index++;          
         }
 
         private void ChoiseCreate()
@@ -41,12 +43,14 @@ namespace Game.View
                 _choise.Show();
                 foreach (Transform child in _choise._parrent)
                 {
-                    Destroy(child.gameObject);
+                    //Destroy(child.gameObject);
+                    child.gameObject.SetActive(false);
                 }
-                //Debug.Log(_dialogs.Get[_index].choises.Length);
+
                 foreach (MyDialogs.ChoiseElement element in _dialogs.Get[_index].choises)
                 {
                     _choise.Add(element, this);
+                    _choise.gameObject.SetActive(true);
                 }
             }
         }
@@ -60,9 +64,27 @@ namespace Game.View
 
         public void BackToMainQuestion()
         {
-            if (_dialogs.name.EndsWith("End") && _index == _dialogs.Get.Length )
+            if (_index == _dialogs.Get.Length)
             {
                 SceneManager.LoadScene(2);
+                /*_index = 0;
+                Resources.Load<MyDialogs>("Data/MainQuestions");
+                Debug.Log(_dialogs.name);
+                Start();*/
+            }
+        }
+
+        private void SetCounter()
+        {
+            counter += _dialogs.Get[_index].Number;
+            _questionCounter.text = counter.ToString();
+        }
+
+        private void SetReturnButtonColor()
+        {
+            if (_dialogs.name.EndsWith("End"))
+            {
+                _returnButton.GetComponent<CanvasGroup>().alpha = 1;
             }
         }
     }
