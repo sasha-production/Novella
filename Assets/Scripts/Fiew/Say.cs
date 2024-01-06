@@ -66,7 +66,7 @@ namespace Game.View
         {
             if (_index == _dialogs.Get.Length)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene((int) SceneNames.Scenes.Novell1Scene);
                 /*_index = 0;
                 Resources.Load<MyDialogs>("Data/MainQuestions");
                 Debug.Log(_dialogs.name);
