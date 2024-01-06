@@ -1523,14 +1523,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133126989}
-  m_LocalRotation: {x: 0.8510946, y: -0.5149928, z: -0.08678611, w: 0.053746525}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.030860811, y: -0.10059073, z: 0.51247466, w: 0.85223174}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000041798743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 114514943}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0.12, y: -168.283, z: -117.632}
+  m_LocalEulerAnglesHint: {x: 2.895, y: -11.733, z: 61.742}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -862.622, y: -32.483}
@@ -1608,7 +1608,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2133126993}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114514944}
+        m_TargetAssemblyTypeName: Game.View.Say, Assembly-CSharp
+        m_MethodName: BackToMainQuestion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2133126993
 MonoBehaviour:
   m_ObjectHideFlags: 0
