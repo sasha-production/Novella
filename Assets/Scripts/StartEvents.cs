@@ -10,5 +10,10 @@ public class StartEvents : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+    public void BactToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     
 }
