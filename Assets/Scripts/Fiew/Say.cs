@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using MyDialogs = Game.Data.Dialogs;
 using UnityEngine.SceneManagement;
-using UnityEditor.Build.Content;
 using UnityEngine.UI;
 
 namespace Game.View
@@ -12,7 +11,7 @@ namespace Game.View
         [SerializeField] private MyDialogs _dialogs;
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private TextMeshProUGUI _text;
-        [SerializeField] public Choise _choise;  //Choise _choise  // pr
+        [SerializeField] public Choise _choise;
         [SerializeField] private TextMeshProUGUI _questionCounter;
         [SerializeField] private Button _returnButton;
         private int _index;
@@ -25,7 +24,6 @@ namespace Game.View
         
         public void NextDialog()
         {
-            
             if (_index == _dialogs.Get.Length)
                 return;
             _name.SetText(_dialogs.Get[_index].Name);
@@ -76,7 +74,7 @@ namespace Game.View
 
         private void SetCounter()
         {
-            counter += _dialogs.Get[_index].Number;
+            counter += _dialogs.Get[_index].Point;
             _questionCounter.text = counter.ToString();
         }
 
